@@ -4,7 +4,7 @@ MONROVIA,Liberia,sure,Liberian registry port (capital)
 LIBERIA,Liberia,sure,Country written instead of port
 MAJURO,Marshall Islands,sure,Marshall Islands registry port (capital)
 "MAJURO, MARSHALL ISLANDS",Marshall Islands,sure,Spelling variant of Majuro
-MUJARO,Marshall Islands,unsure,Looks like a typo of Majuro
+MUJARO,Marshall Islands,checked,Looks like a typo of Majuro
 MARSHALL ISLANDS,Marshall Islands,sure,Country written instead of port
 PANAMA,Panama,sure,Panama registry port
 PANAMA CITY,Panama,sure,Spelling variant of Panama
@@ -24,7 +24,7 @@ MADEIRA,Portugal,sure,Madeira International Ship Register (MAR) flies Portuguese
 PORTUGAL,Portugal,sure,Country written instead of port
 LIMASSOL,Cyprus,sure,Cyprus registry port
 PIRAEUS,Greece,sure,Greek registry port
-ANDROS,Greece,unsure,Greek island port of registry (Andros also exists in the Bahamas)
+ANDROS,Greece,checked,Greek island port of registry (Andros also exists in the Bahamas)
 CHIOS,Greece,sure,Greek island port of registry
 HERAKLION,Greece,sure,Greek port (Crete)
 BERGEN,Norway,sure,Norwegian port (NIS/NOR)
@@ -60,17 +60,17 @@ ST JOHNS,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
 ST JOHN'S,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
 ST.JOHN'S,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
 ST.JOHNS,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
-HAMILTON,Bermuda,unsure,Bermuda registry port (Hamilton also exists in Canada/NZ)
-GEORGE TOWN,Cayman Islands,unsure,Cayman Islands registry port (George Town also exists in Malaysia)
-GEORGETOWN,Cayman Islands,unsure,Probably Cayman George Town; could be Georgetown Guyana
+HAMILTON,Bermuda,checked,Bermuda registry port (Hamilton also exists in Canada/NZ)
+GEORGE TOWN,Cayman Islands,checked,Cayman Islands registry port (George Town also exists in Malaysia)
+GEORGETOWN,Cayman Islands,checked,Spelling variant of George Town; 5 of 8 ships use GEORGE TOWN in other years
 BASSETERRE,Saint Kitts and Nevis,sure,St Kitts and Nevis registry port (capital)
-CHARLESTOWN,Saint Kitts and Nevis,unsure,Probably Charlestown Nevis; also a UK port name
+CHARLESTOWN,Saint Kitts and Nevis,checked,Probably Charlestown Nevis; also a UK port name
 KINGSTOWN,Saint Vincent and the Grenadines,sure,St Vincent registry port (capital)
 MALAKAL HARBOR,Palau,sure,Palau registry port
 MALAKAL HARBOUR,Palau,sure,Spelling variant of Malakal Harbor
 MALAKAL,Palau,sure,Spelling variant of Malakal Harbor
 AVATIU,Cook Islands,sure,Cook Islands registry port (Rarotonga)
-MATA UTU,France,unsure,Wallis and Futuna register (French flag)
+MATA UTU,France,checked,Wallis and Futuna register (French flag)
 PORT VILA,Vanuatu,sure,Vanuatu registry port (capital)
 FUNAFUTI,Tuvalu,sure,Tuvalu registry port (capital)
 MORONI,Comoros,sure,Comoros registry port (capital)
@@ -79,7 +79,7 @@ BISSAU,Guinea-Bissau,sure,Guinea-Bissau capital
 LOME,Togo,sure,Togo registry port (capital)
 KRIBI,Cameroon,sure,Cameroon port
 ZANZIBAR,Tanzania,sure,Zanzibar registry (Tanzania)
-PORT VICTORIA,Seychelles,unsure,Probably Victoria (Mahé) Seychelles
+PORT VICTORIA,Seychelles,checked,Probably Victoria (Mahé) Seychelles
 BELIZE CITY,Belize,sure,Belize registry port
 BELIZE,Belize,sure,Country written instead of port
 WILLEMSTAD,Curaçao,sure,Curaçao registry port (Kingdom of the Netherlands)
@@ -161,7 +161,7 @@ ABERDEEN,United Kingdom,sure,UK port
 GLASGOW,United Kingdom,sure,UK port
 BARROW-IN-FURNESS,United Kingdom,sure,UK port
 SOUTHAMPTON,United Kingdom,sure,UK port
-PORTSMOUTH,United Kingdom,unsure,Probably UK (Portsmouth also exists in the USA)
+PORTSMOUTH,Dominica,checked,Dominica registry port (checked by user)
 MARSEILLE,France,sure,French port (also RIF register)
 MORLAIX,France,sure,French port
 LE HAVRE,France,sure,French port
@@ -207,7 +207,7 @@ ST.PETERSBURG,Russia,sure,Russian port
 ST PETERSBURG,Russia,sure,Russian port
 BAKU,Azerbaijan,sure,Azerbaijan port
 BEIRUT,Lebanon,sure,Lebanese port
-TRIPOLI,Libya,unsure,Probably Tripoli Libya; Tripoli also exists in Lebanon
+TRIPOLI,Libya,checked,Tripoli Libya; ships are Libyan oil tankers (ANWAAR LIBYA etc.)
 ALEXANDRIA,Egypt,sure,Egyptian port (Alexandria also exists in the USA)
 LA GOULETTE,Tunisia,sure,Tunisian port
 ALGIERS,Algeria,sure,Algerian port
@@ -316,7 +316,7 @@ STA. CRUZ DE TENERIFE,Spain,sure,Spelling variant of Santa Cruz de Tenerife
 GILBRALTAR,Gibraltar,sure,Misspelling of Gibraltar
 VENEZIA - RI,Italy,sure,Venice with Italian register code
 KOTOR,Montenegro,sure,Montenegrin port
-BAR,Montenegro,unsure,Probably the Montenegrin port of Bar (very short name)
+BAR,Montenegro,checked,Probably the Montenegrin port of Bar (very short name)
 ALGER,Algeria,sure,French name of Algiers
 DERNA,Libya,sure,Libyan port
 TOBRUK,Libya,sure,Libyan port
