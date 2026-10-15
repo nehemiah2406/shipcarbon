@@ -1,0 +1,279 @@
+{
+  "created_utc": "2026-10-15T06:47:25+00:00",
+  "target": "fuel_t (trained on log(fuel_t), reported in tonnes)",
+  "rows": 101428,
+  "ships": 25249,
+  "features": [
+    "ship_type",
+    "tech_eff_type",
+    "flag_group",
+    "tech_eff_value",
+    "time_at_sea_h",
+    "ice_class_yes",
+    "year"
+  ],
+  "top_flags": [
+    "Liberia",
+    "Marshall Islands",
+    "Panama",
+    "Malta",
+    "Singapore",
+    "Hong Kong",
+    "Bahamas",
+    "Portugal",
+    "Norway",
+    "Netherlands",
+    "Cyprus",
+    "Antigua and Barbuda",
+    "Greece",
+    "Italy",
+    "Denmark"
+  ],
+  "best_params": {
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 127,
+    "min_samples_leaf": 50
+  },
+  "search": [
+    {
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "MAE_t": 822.2,
+      "seconds": 11.3
+    },
+    {
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 20,
+      "MAE_t": 811.7,
+      "seconds": 17.1
+    },
+    {
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 50,
+      "MAE_t": 817.8,
+      "seconds": 26.2
+    },
+    {
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 127,
+      "min_samples_leaf": 50,
+      "MAE_t": 810.9,
+      "seconds": 30.4
+    },
+    {
+      "learning_rate": 0.1,
+      "max_leaf_nodes": 63,
+      "min_samples_leaf": 100,
+      "l2_regularization": 1.0,
+      "MAE_t": 821.2,
+      "seconds": 17.9
+    },
+    {
+      "learning_rate": 0.05,
+      "max_leaf_nodes": 31,
+      "min_samples_leaf": 20,
+      "l2_regularization": 1.0,
+      "MAE_t": 828.2,
+      "seconds": 16.7
+    }
+  ],
+  "validation": {
+    "GroupKFold by IMO | baseline": {
+      "MAE_t": 1405.0,
+      "MAPE_%": 51.5,
+      "median_%_error": 26.5,
+      "R2": 0.619,
+      "R2_log": 0.786
+    },
+    "GroupKFold by IMO | model": {
+      "MAE_t": 755.3,
+      "MAPE_%": 26.2,
+      "median_%_error": 14.9,
+      "R2": 0.86,
+      "R2_log": 0.905
+    },
+    "Train 2018-23, test 2024-25 | baseline": {
+      "MAE_t": 1457.8,
+      "MAPE_%": 80.4,
+      "median_%_error": 28.9,
+      "R2": 0.63,
+      "R2_log": 0.744
+    },
+    "Train 2018-23, test 2024-25 | model": {
+      "MAE_t": 735.7,
+      "MAPE_%": 36.2,
+      "median_%_error": 15.7,
+      "R2": 0.882,
+      "R2_log": 0.89
+    }
+  },
+  "per_ship_type": [
+    {
+      "ship_type": "Bulk carrier",
+      "ship_years": 28944.0,
+      "median_fuel_t": 1193.4,
+      "MAE_model_t": 239.0,
+      "MAE_baseline_t": 355.1,
+      "median_%_error_model": 12.4,
+      "median_%_error_baseline": 18.3
+    },
+    {
+      "ship_type": "Container ship",
+      "ship_years": 15301.0,
+      "median_fuel_t": 5350.4,
+      "MAE_model_t": 1659.0,
+      "MAE_baseline_t": 3912.4,
+      "median_%_error_model": 18.8,
+      "median_%_error_baseline": 47.1
+    },
+    {
+      "ship_type": "Oil tanker",
+      "ship_years": 15034.0,
+      "median_fuel_t": 2548.9,
+      "MAE_model_t": 532.8,
+      "MAE_baseline_t": 920.3,
+      "median_%_error_model": 14.0,
+      "median_%_error_baseline": 24.1
+    },
+    {
+      "ship_type": "General cargo ship",
+      "ship_years": 11394.0,
+      "median_fuel_t": 1182.3,
+      "MAE_model_t": 338.2,
+      "MAE_baseline_t": 665.9,
+      "median_%_error_model": 18.0,
+      "median_%_error_baseline": 39.6
+    },
+    {
+      "ship_type": "Chemical tanker",
+      "ship_years": 11070.0,
+      "median_fuel_t": 1924.9,
+      "MAE_model_t": 335.2,
+      "MAE_baseline_t": 582.4,
+      "median_%_error_model": 12.9,
+      "median_%_error_baseline": 20.7
+    },
+    {
+      "ship_type": "Vehicle carrier",
+      "ship_years": 3704.0,
+      "median_fuel_t": 2721.7,
+      "MAE_model_t": 454.0,
+      "MAE_baseline_t": 677.0,
+      "median_%_error_model": 11.7,
+      "median_%_error_baseline": 13.6
+    },
+    {
+      "ship_type": "Ro-pax ship",
+      "ship_years": 3224.0,
+      "median_fuel_t": 9998.4,
+      "MAE_model_t": 3250.8,
+      "MAE_baseline_t": 4535.6,
+      "median_%_error_model": 26.5,
+      "median_%_error_baseline": 37.9
+    },
+    {
+      "ship_type": "Gas carrier",
+      "ship_years": 2716.0,
+      "median_fuel_t": 1938.5,
+      "MAE_model_t": 593.6,
+      "MAE_baseline_t": 1099.3,
+      "median_%_error_model": 16.8,
+      "median_%_error_baseline": 33.2
+    },
+    {
+      "ship_type": "LNG carrier",
+      "ship_years": 2548.0,
+      "median_fuel_t": 7571.7,
+      "MAE_model_t": 1768.8,
+      "MAE_baseline_t": 2871.9,
+      "median_%_error_model": 15.2,
+      "median_%_error_baseline": 26.3
+    },
+    {
+      "ship_type": "Ro-ro ship",
+      "ship_years": 1937.0,
+      "median_fuel_t": 7061.1,
+      "MAE_model_t": 1644.9,
+      "MAE_baseline_t": 2516.0,
+      "median_%_error_model": 17.6,
+      "median_%_error_baseline": 29.5
+    },
+    {
+      "ship_type": "Other ship types",
+      "ship_years": 1825.0,
+      "median_fuel_t": 1780.0,
+      "MAE_model_t": 706.7,
+      "MAE_baseline_t": 1003.3,
+      "median_%_error_model": 24.9,
+      "median_%_error_baseline": 33.6
+    },
+    {
+      "ship_type": "Passenger ship",
+      "ship_years": 1428.0,
+      "median_fuel_t": 7880.0,
+      "MAE_model_t": 2850.0,
+      "MAE_baseline_t": 5270.8,
+      "median_%_error_model": 23.9,
+      "median_%_error_baseline": 45.7
+    },
+    {
+      "ship_type": "Refrigerated cargo carrier",
+      "ship_years": 1116.0,
+      "median_fuel_t": 1752.6,
+      "MAE_model_t": 681.2,
+      "MAE_baseline_t": 1085.9,
+      "median_%_error_model": 18.3,
+      "median_%_error_baseline": 28.3
+    },
+    {
+      "ship_type": "Other ship types (Offshore)",
+      "ship_years": 575.0,
+      "median_fuel_t": 1211.4,
+      "MAE_model_t": 1106.6,
+      "MAE_baseline_t": 1246.7,
+      "median_%_error_model": 53.2,
+      "median_%_error_baseline": 57.5
+    },
+    {
+      "ship_type": "Container/ro-ro cargo ship",
+      "ship_years": 538.0,
+      "median_fuel_t": 5852.3,
+      "MAE_model_t": 851.6,
+      "MAE_baseline_t": 1588.2,
+      "median_%_error_model": 8.6,
+      "median_%_error_baseline": 13.8
+    },
+    {
+      "ship_type": "Combination carrier",
+      "ship_years": 74.0,
+      "median_fuel_t": 1784.3,
+      "MAE_model_t": 698.2,
+      "MAE_baseline_t": 655.7,
+      "median_%_error_model": 19.6,
+      "median_%_error_baseline": 18.5
+    }
+  ],
+  "permutation_importance_mae_t": {
+    "time_at_sea_h": 1772.4,
+    "ship_type": 1653.7,
+    "tech_eff_value": 879.0,
+    "flag_group": 175.5,
+    "tech_eff_type": 81.0,
+    "ice_class_yes": 41.2,
+    "year": 0.0
+  },
+  "data_versions": {
+    "2018": 275,
+    "2019": 228,
+    "2020": 210,
+    "2021": 219,
+    "2022": 241,
+    "2023": 92,
+    "2024": 252,
+    "2025": 65
+  },
+  "sklearn_version": "1.9.1"
+}
