@@ -1,0 +1,338 @@
+port,flag,confidence,source_note
+MONROVIA,Liberia,sure,Liberian registry port (capital)
+"MONROVIA, LIBERIA",Liberia,sure,Spelling variant of Monrovia
+LIBERIA,Liberia,sure,Country written instead of port
+MAJURO,Marshall Islands,sure,Marshall Islands registry port (capital)
+"MAJURO, MARSHALL ISLANDS",Marshall Islands,sure,Spelling variant of Majuro
+MUJARO,Marshall Islands,unsure,Looks like a typo of Majuro
+MARSHALL ISLANDS,Marshall Islands,sure,Country written instead of port
+PANAMA,Panama,sure,Panama registry port
+PANAMA CITY,Panama,sure,Spelling variant of Panama
+"PANAMA, CIUDAD DE",Panama,sure,Spelling variant of Panama
+VALLETTA,Malta,sure,Malta registry port (capital)
+VALETTA,Malta,sure,Misspelling of Valletta
+VALLETA,Malta,sure,Misspelling of Valletta
+LA VALLETTA,Malta,sure,Spelling variant of Valletta
+MALTA,Malta,sure,Country written instead of port
+SINGAPORE,Singapore,sure,Singapore registry
+NASSAU,Bahamas,sure,Bahamas registry port (capital)
+HONG KONG,Hong Kong,sure,Hong Kong registry (separate from mainland China register)
+"HONG KONG, CHINA",Hong Kong,sure,Spelling variant of Hong Kong
+HONGKONG,Hong Kong,sure,Spelling variant of Hong Kong
+MADEIRA,Portugal,sure,Madeira International Ship Register (MAR) flies Portuguese flag
+"FUNCHAL, MADEIRA",Portugal,sure,Madeira International Ship Register (MAR)
+PORTUGAL,Portugal,sure,Country written instead of port
+LIMASSOL,Cyprus,sure,Cyprus registry port
+PIRAEUS,Greece,sure,Greek registry port
+ANDROS,Greece,unsure,Greek island port of registry (Andros also exists in the Bahamas)
+CHIOS,Greece,sure,Greek island port of registry
+HERAKLION,Greece,sure,Greek port (Crete)
+BERGEN,Norway,sure,Norwegian port (NIS/NOR)
+OSLO,Norway,sure,Norwegian port
+STAVANGER,Norway,sure,Norwegian port
+HAUGESUND,Norway,sure,Norwegian port
+TROMSØ,Norway,sure,Norwegian port
+TROMSO,Norway,sure,Spelling variant of Tromsø
+EGERSUND,Norway,sure,Norwegian port
+ARENDAL,Norway,sure,Norwegian port
+GRIMSTAD,Norway,sure,Norwegian port
+TONSBERG,Norway,sure,Norwegian port (Tønsberg)
+KRISTIANSAND,Norway,sure,Norwegian port
+FOSNAVÅG,Norway,sure,Norwegian port
+ÅLESUND,Norway,sure,Norwegian port
+AALESUND,Norway,sure,Spelling variant of Ålesund
+HORTEN,Norway,sure,Norwegian port
+ÅKREHAMN,Norway,sure,Norwegian port
+HAMMERFEST,Norway,sure,Norwegian port
+SANDNES,Norway,sure,Norwegian port
+SKUDENESHAVN,Norway,sure,Norwegian port
+TRONDHEIM,Norway,sure,Norwegian port
+DOUGLAS,Isle of Man,sure,Isle of Man registry port
+BRIDGETOWN,Barbados,sure,Barbados registry port (capital)
+BRIDGE TOWN,Barbados,sure,Spelling variant of Bridgetown
+BRIDGETOWN (BB),Barbados,sure,Spelling variant of Bridgetown
+ST. JOHN'S,Antigua and Barbuda,sure,Antigua and Barbuda registry port (capital)
+SAINT JOHN'S,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+SAINT-JOHN'S,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+SAINT JOHN'S (AG SJO),Antigua and Barbuda,sure,UN/LOCODE AG SJO
+ST. JOHNS,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+ST JOHNS,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+ST JOHN'S,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+ST.JOHN'S,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+ST.JOHNS,Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+HAMILTON,Bermuda,unsure,Bermuda registry port (Hamilton also exists in Canada/NZ)
+GEORGE TOWN,Cayman Islands,unsure,Cayman Islands registry port (George Town also exists in Malaysia)
+GEORGETOWN,Cayman Islands,unsure,Probably Cayman George Town; could be Georgetown Guyana
+BASSETERRE,Saint Kitts and Nevis,sure,St Kitts and Nevis registry port (capital)
+CHARLESTOWN,Saint Kitts and Nevis,unsure,Probably Charlestown Nevis; also a UK port name
+KINGSTOWN,Saint Vincent and the Grenadines,sure,St Vincent registry port (capital)
+MALAKAL HARBOR,Palau,sure,Palau registry port
+MALAKAL HARBOUR,Palau,sure,Spelling variant of Malakal Harbor
+MALAKAL,Palau,sure,Spelling variant of Malakal Harbor
+AVATIU,Cook Islands,sure,Cook Islands registry port (Rarotonga)
+MATA UTU,France,unsure,Wallis and Futuna register (French flag)
+PORT VILA,Vanuatu,sure,Vanuatu registry port (capital)
+FUNAFUTI,Tuvalu,sure,Tuvalu registry port (capital)
+MORONI,Comoros,sure,Comoros registry port (capital)
+FREETOWN,Sierra Leone,sure,Sierra Leone registry port (capital)
+BISSAU,Guinea-Bissau,sure,Guinea-Bissau capital
+LOME,Togo,sure,Togo registry port (capital)
+KRIBI,Cameroon,sure,Cameroon port
+ZANZIBAR,Tanzania,sure,Zanzibar registry (Tanzania)
+PORT VICTORIA,Seychelles,unsure,Probably Victoria (Mahé) Seychelles
+BELIZE CITY,Belize,sure,Belize registry port
+BELIZE,Belize,sure,Country written instead of port
+WILLEMSTAD,Curaçao,sure,Curaçao registry port (Kingdom of the Netherlands)
+TORSHAVN,Faroe Islands,sure,Faroe Islands registry (FAS)
+GIBRALTAR,Gibraltar,sure,Gibraltar registry
+ARKLOW,Ireland,sure,Irish port
+DELFZIJL,Netherlands,sure,Dutch port
+AMSTERDAM,Netherlands,sure,Dutch port
+ROTTERDAM,Netherlands,sure,Dutch port
+HARLINGEN,Netherlands,sure,Dutch port
+HEERENVEEN,Netherlands,sure,Dutch town used as port of registry
+GRONINGEN,Netherlands,sure,Dutch port
+DORDRECHT,Netherlands,sure,Dutch port
+SNEEK,Netherlands,sure,Dutch town used as port of registry
+HOEK VAN HOLLAND,Netherlands,sure,Dutch port
+HOOGEZAND,Netherlands,sure,Dutch town used as port of registry
+BRESKENS,Netherlands,sure,Dutch port
+VLISSINGEN,Netherlands,sure,Dutch port
+SCHOONHOVEN,Netherlands,sure,Dutch town used as port of registry
+PAPENDRECHT,Netherlands,sure,Dutch town used as port of registry
+URK,Netherlands,sure,Dutch port
+ANTWERP,Belgium,sure,Belgian port
+ANTWERPEN,Belgium,sure,Spelling variant of Antwerp
+LUXEMBOURG,Luxembourg,sure,Luxembourg registry
+BASEL,Switzerland,sure,Swiss registry port
+SAN MARINO,San Marino,sure,San Marino registry
+HAMBURG,Germany,sure,German port
+BREMEN,Germany,sure,German port
+ROSTOCK,Germany,sure,German port
+EMDEN,Germany,sure,German port
+PUTTGARDEN,Germany,sure,German port
+COPENHAGEN,Denmark,sure,Danish port
+KOBENHAVN,Denmark,sure,Spelling variant of Copenhagen
+KØBENHAVN,Denmark,sure,Spelling variant of Copenhagen
+HELLERUP,Denmark,sure,Copenhagen suburb used as port of registry
+SKOVSHOVED,Denmark,sure,Copenhagen suburb used as port of registry
+DRAGOR,Denmark,sure,Danish port (Dragør)
+SVENDBORG,Denmark,sure,Danish port
+SKAGEN,Denmark,sure,Danish port
+ESBJERG,Denmark,sure,Danish port
+AARHUS,Denmark,sure,Danish port
+AALBORG,Denmark,sure,Danish port
+HERNING,Denmark,sure,Danish town used as port of registry
+MIDDELFART,Denmark,sure,Danish port
+ROENNE,Denmark,sure,Danish port (Rønne)
+ROSKILDE,Denmark,sure,Danish port
+VEJLE,Denmark,sure,Danish port
+MARSTAL,Denmark,sure,Danish port
+FREDERIKSHAVN,Denmark,sure,Danish port
+RODBYHAVN,Denmark,sure,Danish port (Rødbyhavn)
+HELSINGÖR,Denmark,sure,Danish port (Helsingør)
+STOCKHOLM,Sweden,sure,Swedish port
+GOTHENBURG,Sweden,sure,Swedish port
+GÖTEBORG,Sweden,sure,Spelling variant of Gothenburg
+DONSÖ,Sweden,sure,Swedish port
+DONSO,Sweden,sure,Spelling variant of Donsö
+MALMÖ,Sweden,sure,Swedish port
+TRELLEBORG,Sweden,sure,Swedish port
+VISBY,Sweden,sure,Swedish port
+SUNDSVALL,Sweden,sure,Swedish port
+LIDKÖPING,Sweden,sure,Swedish port
+HELSINKI,Finland,sure,Finnish port
+HELSINGFORS,Finland,sure,Swedish name of Helsinki
+"HELSINKI, FINLAND",Finland,sure,Spelling variant of Helsinki
+MARIEHAMN,Finland,sure,Åland Islands (Finland)
+BRANDO,Finland,sure,Åland Islands (Finland)
+ECKERÖ,Finland,sure,Åland Islands (Finland)
+PORVOO,Finland,sure,Finnish port
+TURKU,Finland,sure,Finnish port
+PIIKKIO,Finland,sure,Finnish port (Piikkiö)
+TALLINN,Estonia,sure,Estonian port
+RIGA,Latvia,sure,Latvian port
+KLAIPEDA,Lithuania,sure,Lithuanian port
+LONDON,United Kingdom,sure,UK port
+CARDIFF,United Kingdom,sure,UK port
+DOVER,United Kingdom,sure,UK port
+COWES,United Kingdom,sure,UK port
+ABERDEEN,United Kingdom,sure,UK port
+GLASGOW,United Kingdom,sure,UK port
+BARROW-IN-FURNESS,United Kingdom,sure,UK port
+SOUTHAMPTON,United Kingdom,sure,UK port
+PORTSMOUTH,United Kingdom,unsure,Probably UK (Portsmouth also exists in the USA)
+MARSEILLE,France,sure,French port (also RIF register)
+MORLAIX,France,sure,French port
+LE HAVRE,France,sure,French port
+BASTIA,France,sure,French port (Corsica)
+AJACCIO,France,sure,French port (Corsica)
+CAEN,France,sure,French port
+CHERBOURG,France,sure,French port
+SANTA CRUZ DE TENERIFE,Spain,sure,Spanish Canary Islands special register
+LAS PALMAS DE GRAN CANARIA,Spain,sure,Spanish port (Canary Islands)
+PALERMO,Italy,sure,Italian port
+NAPOLI,Italy,sure,Italian port
+NAPLES,Italy,sure,Spelling variant of Napoli
+GENOVA,Italy,sure,Italian port
+GENOA,Italy,sure,Spelling variant of Genova
+CATANIA,Italy,sure,Italian port
+BARI,Italy,sure,Italian port
+CAGLIARI,Italy,sure,Italian port
+TRIESTE,Italy,sure,Italian port
+RAVENNA,Italy,sure,Italian port
+VENICE,Italy,sure,Italian port
+VENEZIA,Italy,sure,Spelling variant of Venice
+LIVORNO,Italy,sure,Italian port
+AUGUSTA,Italy,sure,Italian port (Sicily)
+ANCONA,Italy,sure,Italian port
+RIJEKA,Croatia,sure,Croatian port
+ZADAR,Croatia,sure,Croatian port
+PULA,Croatia,sure,Croatian port
+SPLIT,Croatia,sure,Croatian port
+DUBROVNIK,Croatia,sure,Croatian port
+VARNA,Bulgaria,sure,Bulgarian port
+BURGAS,Bulgaria,sure,Bulgarian port
+ISTANBUL,Turkey,sure,Turkish port
+İSTANBUL,Turkey,sure,Spelling variant of Istanbul
+IZMIR,Turkey,sure,Turkish port
+İZMIR,Turkey,sure,Spelling variant of Izmir
+TEKIRDAG,Turkey,sure,Turkish port
+TAGANROG,Russia,sure,Russian port
+NOVOROSSIYSK,Russia,sure,Russian port
+ARKHANGELSK,Russia,sure,Russian port
+BOLSHOY PORT OF ST.-PETERSBURG,Russia,sure,Russian port (St Petersburg)
+BOLSHOY PORT OF SAINT PETERSBURG,Russia,sure,Russian port (St Petersburg)
+ST.PETERSBURG,Russia,sure,Russian port
+ST PETERSBURG,Russia,sure,Russian port
+BAKU,Azerbaijan,sure,Azerbaijan port
+BEIRUT,Lebanon,sure,Lebanese port
+TRIPOLI,Libya,unsure,Probably Tripoli Libya; Tripoli also exists in Lebanon
+ALEXANDRIA,Egypt,sure,Egyptian port (Alexandria also exists in the USA)
+LA GOULETTE,Tunisia,sure,Tunisian port
+ALGIERS,Algeria,sure,Algerian port
+ORAN,Algeria,sure,Algerian port
+TANGER,Morocco,sure,Moroccan port
+TANGIER,Morocco,sure,Spelling variant of Tanger
+CASABLANCA,Morocco,sure,Moroccan port
+DAMMAM,Saudi Arabia,sure,Saudi port
+KUWAIT,Kuwait,sure,Kuwait registry
+QESHM ISLAND,Iran,sure,Iranian port
+MUMBAI,India,sure,Indian port
+CHATTOGRAM,Bangladesh,sure,Bangladeshi port (Chittagong)
+BANGKOK,Thailand,sure,Thai port
+PORT KELANG,Malaysia,sure,Malaysian port
+JAKARTA,Indonesia,sure,Indonesian port
+MANILA,Philippines,sure,Philippine port
+HAI PHONG,Vietnam,sure,Vietnamese port
+TOKYO,Japan,sure,Japanese port
+KOBE,Japan,sure,Japanese port
+FUKUOKA,Japan,sure,Japanese port
+JEJU,South Korea,sure,South Korean registry (Jeju international register)
+KEELUNG,Taiwan,sure,Taiwanese port
+GUANGZHOU,China,sure,Chinese port
+GUANG ZHOU,China,sure,Spelling variant of Guangzhou
+GUANG ZHOU CHINA,China,sure,Spelling variant of Guangzhou
+SHANGHAI,China,sure,Chinese port
+SHANG HAI,China,sure,Spelling variant of Shanghai
+HAIKOU,China,sure,Chinese port (Hainan)
+HAI KOU,China,sure,Spelling variant of Haikou
+YANGPU,China,sure,Chinese port (Hainan)
+YANG PU,China,sure,Spelling variant of Yangpu
+YANGPU CHINA,China,sure,Spelling variant of Yangpu
+YANG PU CHINA,China,sure,Spelling variant of Yangpu
+YANG SHAN CHINA,China,sure,Chinese port (Shanghai Yangshan)
+TIANJIN,China,sure,Chinese port
+NINGBO,China,sure,Chinese port
+XIAMEN,China,sure,Chinese port
+SHENZHEN,China,sure,Chinese port
+NORFOLK,United States,sure,US port (Virginia)
+"NORFOLK, VA",United States,sure,US port (Virginia)
+"WILMINGTON, DE",United States,sure,US port (Delaware)
+NEW YORK,United States,sure,US port
+"NEW ORLEANS, LA",United States,sure,US port
+"MOBILE, AL",United States,sure,US port
+"CHARLESTON, SC",United States,sure,US port
+RIO DE JANEIRO,Brazil,sure,Brazilian port
+SAINT PETERSBURG,Russia,sure,Russian port
+BOLSHOY PORT OF SAINT-PETERSBURG,Russia,sure,Russian port (St Petersburg)
+BOLSHOY PORT SAINT PETERSBURG,Russia,sure,Russian port (St Petersburg)
+BOLSHOY PORT OF ST.PETERSBURG,Russia,sure,Russian port (St Petersburg)
+ST. PETERSBURG,Russia,sure,Russian port
+LIMASOL,Cyprus,sure,Misspelling of Limassol
+MADERIA,Portugal,sure,Misspelling of Madeira (MAR register)
+FUNCHAL,Portugal,sure,Madeira International Ship Register (MAR)
+PONTA DELGADA,Portugal,sure,Portuguese port (Azores)
+PIRAUES,Greece,sure,Misspelling of Piraeus
+RETHYMNO,Greece,sure,Greek port (Crete)
+CHANIA,Greece,sure,Greek port (Crete)
+OLSO,Norway,sure,Misspelling of Oslo
+FLORØ,Norway,sure,Norwegian port
+TØNSBERG,Norway,sure,Norwegian port
+SANDEFJORD,Norway,sure,Norwegian port
+FOSNAVAG,Norway,sure,Spelling variant of Fosnavåg
+LONGYEARBYEN,Norway,sure,Norwegian port (Svalbard)
+TÓRSHAVN,Faroe Islands,sure,Faroe Islands registry (FAS)
+"TORSHAVN, FAROE ISLANDS",Faroe Islands,sure,Faroe Islands registry (FAS)
+NOLSOY,Faroe Islands,sure,Faroese port
+RUNAVIK,Faroe Islands,sure,Faroese port
+HIRTSHALS,Denmark,sure,Danish port
+RINGKOBING,Denmark,sure,Danish port
+GRENAA,Denmark,sure,Danish port
+DRAGOER,Denmark,sure,Spelling variant of Dragør
+SONDERBORG,Denmark,sure,Danish port
+SÆBY,Denmark,sure,Danish port
+TAARBAEK,Denmark,sure,Danish port
+LEMVIG,Denmark,sure,Danish port
+GEDSER,Denmark,sure,Danish port
+MARIBO,Denmark,sure,Danish town used as port of registry
+MOGELTONDER,Denmark,sure,Danish town used as port of registry
+MUNKEBO,Denmark,sure,Danish port
+ROMO,Denmark,sure,Danish port (Rømø)
+HUMLEBAEK,Denmark,sure,Danish port
+STRUER,Denmark,sure,Danish port
+VAASA,Finland,sure,Finnish port
+FINSTROM,Finland,sure,Åland Islands (Finland)
+HELSINGBORG,Sweden,sure,Swedish port
+OSKARSHAMN,Sweden,sure,Swedish port
+GRISSLEHAMN,Sweden,sure,Swedish port
+GDANSK,Poland,sure,Polish port
+LEER,Germany,sure,German port
+LEMMER,Netherlands,sure,Dutch port
+WERKENDAM,Netherlands,sure,Dutch port
+SCHEVENINGEN,Netherlands,sure,Dutch port
+ZWARTSLUIS,Netherlands,sure,Dutch port
+NOORDWIJK,Netherlands,sure,Dutch town used as port of registry
+ZEEBRUGGE,Belgium,sure,Belgian port
+BELFAST,United Kingdom,sure,UK port
+LIVERPOOL,United Kingdom,sure,UK port
+STRANRAER,United Kingdom,sure,UK port
+HARWICH,United Kingdom,sure,UK port
+PEEL,Isle of Man,sure,Isle of Man port
+BORDEAUX,France,sure,French port
+ROUEN,France,sure,French port
+DIEPPE,France,sure,French port
+STA. CRUZ DE TENERIFE,Spain,sure,Spelling variant of Santa Cruz de Tenerife
+GILBRALTAR,Gibraltar,sure,Misspelling of Gibraltar
+VENEZIA - RI,Italy,sure,Venice with Italian register code
+KOTOR,Montenegro,sure,Montenegrin port
+BAR,Montenegro,unsure,Probably the Montenegrin port of Bar (very short name)
+ALGER,Algeria,sure,French name of Algiers
+DERNA,Libya,sure,Libyan port
+TOBRUK,Libya,sure,Libyan port
+HAIFA,Israel,sure,Israeli port
+AQABA,Jordan,sure,Jordanian port
+BANDAR ABBAS,Iran,sure,Iranian port
+QESHM,Iran,sure,Iranian port
+COLOMBO,Sri Lanka,sure,Sri Lankan port
+DALIAN,China,sure,Chinese port
+HAIPHONG,Vietnam,sure,Vietnamese port
+SAI GON,Vietnam,sure,Vietnamese port (Ho Chi Minh City)
+IMABARI,Japan,sure,Japanese port
+"NASSAU, BAHAMAS",Bahamas,sure,Spelling variant of Nassau
+ST. JOHNS',Antigua and Barbuda,sure,Spelling variant of St. John's (Antigua)
+WILMINGTON,United States,sure,US port (Delaware or North Carolina; both US)
+TORONTO,Canada,sure,Canadian port
+QUEBEC,Canada,sure,Canadian port
+VALPARAISO,Chile,sure,Chilean port
+MANAUS,Brazil,sure,Brazilian port

@@ -185,7 +185,7 @@ versions; a second run downloads nothing.
 **Result:** 8 files (46 MB) downloaded. All 10 sheets open with pandas: 62 columns for 2018–2023, 113 for 2024–2025.
 A second run skipped all 8 years. 8/8 tests in `tests/test_download.py` pass.
 
-### Phase 2 — Clean and store
+### Phase 2 — Clean and store ✅ (2026-10-15)
 `pipeline/columns.py` maps each era's column names to the clean names in section 1. `pipeline/clean.py`:
 - reads both sheets for 2024+ and adds `report_kind`
 - parses technical efficiency into type + value
@@ -199,6 +199,23 @@ indexes on `year`, `ship_type`, `flag` and `imo`. The same script works for loca
 **Done when:** row counts per year/sheet equal the raw files; total CO₂ per year matches the raw totals within
 0.01%; ≥ 95% of ships get a real flag (not `Unknown`); `pytest tests/test_clean.py` passes; MongoDB has the
 documents and indexes.
+
+**Result:**
+- 109,711 reports (= raw) and 107,894 ship-years, in both CSV and MongoDB (`reports`, `ship_years`).
+- CO₂ per year equals the raw files (0.0000% difference).
+- Flag known for 96.0–98.2% of ship-years per year (97.6% overall). A blank port borrows the same ship's nearest
+  other year (`flag_source = port_other_year`, 4,385 ship-years).
+- Loading twice changes 0 documents.
+- 36 tests in `tests/test_clean.py` pass.
+
+**Decision — partial reports overlap full reports.** For a ship that has both in one year, the full report already
+covers the partial periods. Evidence: in 2024, 190 of 726 such ships have identical numbers, 255 have more sea hours
+than the non-partial days allow, and only 2 have full < partial. So:
+- every report is kept with `report_kind`
+- `counts_in_total` is true for full reports and for partials of ships without a full report
+- yearly totals and `ship_years` use only `counts_in_total` rows
+
+Adding all partials would double-count 4.4 Mt (2024) and 5.1 Mt (2025).
 
 ### Phase 3 — Exploratory analysis
 `notebooks/01_eda.ipynb`. Questions: total CO₂ per year (and whether 2025 is comparable); CO₂ by ship type (total
