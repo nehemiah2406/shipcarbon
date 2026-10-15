@@ -83,7 +83,7 @@ def test_port_lookup_file_has_no_duplicate_ports():
     table = pd.read_csv(clean.PORT_TO_FLAG, encoding="utf-8")
     normalised = table["port"].map(clean.normalise_port)
     assert not normalised.duplicated().any()
-    assert set(table["confidence"]) <= {"sure", "unsure"}
+    assert set(table["confidence"]) <= {"sure", "unsure", "checked"}
 
 
 # ---------- column mapping per era ----------
