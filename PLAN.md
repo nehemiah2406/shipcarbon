@@ -266,13 +266,40 @@ in the README; a feature-importance chart is in `docs/img/`; predicting a single
 - `predict_one` rejects unknown ship types, unknown fields and > 8,784 h; unseen flags become "Other".
 - 14 tests in `tests/test_ml.py` pass (58 in total). The README is written in Phase 7 and quotes the table above.
 
-### Phase 5a — API (FastAPI)
+### Phase 5a — API (FastAPI) ✅ (2026-10-15)
 Endpoints: `GET /api/health`, `GET /api/meta` (years, ship types, flags), `GET /api/kpis`,
 `GET /api/co2-by-type`, `GET /api/co2-by-year`, `GET /api/top-emitters`. The data endpoints take the filters
 `year`, `ship_type` and `flag`. `POST /api/predict` returns fuel, CO₂ and a smoke-scale value. CORS is limited to the
 frontend's URL.
 **Done when:** `/docs` shows every endpoint; `pytest tests/test_api.py` passes; each endpoint answers in < 300 ms
 locally.
+
+**Result:** `uvicorn backend.app.main:app --reload` from the project root → <http://127.0.0.1:8000/docs>.
+- `backend/app/main.py` (app, CORS, `/api/health`), `db.py` (`MONGODB_URI`, `MONGODB_DB`), `routes/stats.py`,
+  `routes/predict.py`. Slim `backend/requirements.txt` for Render (checked in a clean venv).
+- Statistics use the `ship_years` collection (no double-counted partial reports) with MongoDB aggregation pipelines.
+  The 2025 passenger label is merged with `ml.features.SHIP_TYPE_MERGE`; ship groups come from
+  `pipeline.clean.SHIP_GROUPS`.
+- `co2eq_t` is `null` for any selection that includes years before 2024 (EMSA publishes CO₂eq only from 2024).
+- `top-emitters` ranks ship-years; without a year filter, all years are ranked together.
+- `POST /api/predict` is validated by a Pydantic model (unknown fields, unknown ship type, hours outside 0–8,784
+  → 422 naming the field) and calls `ml.predict.predict_one`.
+- CORS: `http://localhost:5173` plus the comma-separated `FRONTEND_ORIGINS`.
+- 32 tests in `tests/test_api.py` (mongomock, never the real database); 90 tests in total.
+- Speed, measured with the local server: cached views 6–9 ms, never-cached filter combinations 11–115 ms,
+  `/api/meta` 37 ms, `/api/predict` 44–105 ms.
+
+**Decisions — speed.**
+- A full pass over all 108k ship-years takes 150–400 ms on this laptop. So answers are cached in memory for 10 min
+  (the data only changes when `load_mongo.py` runs). At start-up, a background thread pre-computes the views with
+  no filter, each year and each ship type.
+- Three covering indexes (year-, ship_type- and flag-first, plus imo/co2/co2eq/fuel) are created by the API at
+  start-up. They take never-cached filters from up to 280 ms down to under 120 ms.
+- The model has 1,000 trees. scikit-learn spread each tree over all 12 CPU cores, which for a single ship cost
+  ~100 ms, plus 1.7–5 s the first time in each new request thread. Predictions now run on one dedicated worker thread
+  limited to one CPU thread (~35–60 ms).
+- Note for later: early stopping never stopped (`n_iter_` = 1,000 = `max_iter`), so the model might still improve
+  with more trees.
 
 ### Phase 5b — Website (React + Vite + react-three-fiber)
 - Design tokens are copied exactly from the mockup: `#0a1220` background, `#0f1a2b` panels, `#20324a` lines,
