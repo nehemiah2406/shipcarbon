@@ -217,13 +217,24 @@ than the non-partial days allow, and only 2 have full < partial. So:
 
 Adding all partials would double-count 4.4 Mt (2024) and 5.1 Mt (2025).
 
-### Phase 3 — Exploratory analysis
+### Phase 3 — Exploratory analysis ✅ (2026-10-15)
 `notebooks/01_eda.ipynb`. Questions: total CO₂ per year (and whether 2025 is comparable); CO₂ by ship type (total
 vs per ship); which flags carry the most emissions; how concentrated emissions are (share from the top 10% of
 ships); CO₂ split between intra-EU voyages, voyages into/out of the EU, and at berth; efficiency (CO₂ per n mile) by
 type; CH₄/N₂O for LNG carriers since 2024.
 **Done when:** the notebook runs top to bottom on a fresh kernel; `docs/insights.md` has 5–7 short insights, each
 with a number and a chart in `docs/img/`; every number can be traced back to a notebook cell.
+
+**Result:**
+- The notebook runs in a fresh kernel via nbclient: 9 code cells, 0 errors, about 10 s.
+- 7 charts are in `docs/img/` and 7 insights in `docs/insights.md`.
+
+Findings that matter for later phases:
+- **2025 is not like-for-like.** About 2,200 newly covered general cargo and offshore ships add 6.6 Mt. The ships
+  reported in both 2024 and 2025 emitted 6.3% less.
+- **EMSA relabelled passenger ships in 2025** ("Passenger ship (Cruise Passenger ship)"). The labels are merged in
+  the analysis; Phase 4 and the API must merge them too.
+- **CO₂eq uses the IPCC factors** CH₄ × 28 and N₂O × 265.
 
 ### Phase 4 — ML: predict annual fuel consumption
 - **Target:** `log(fuel_t)`, on full reports with fuel > 0.
