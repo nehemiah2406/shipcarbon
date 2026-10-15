@@ -1,0 +1,69 @@
+{
+  "source": "https://mrv.emsa.europa.eu/api/public-emission-report",
+  "years": {
+    "2018": {
+      "downloaded_at_utc": "2026-10-15T05:54:14+00:00",
+      "file_name": "2018-v275-29032026-EU MRV Publication of information",
+      "file_size_bytes": 3916160,
+      "generation_date": "29-03-2026 05:12:54",
+      "version": 275,
+      "year": 2018
+    },
+    "2019": {
+      "downloaded_at_utc": "2026-10-15T05:54:22+00:00",
+      "file_name": "2019-v228-13082026-EU MRV Publication of information",
+      "file_size_bytes": 4014723,
+      "generation_date": "13-08-2026 05:08:14",
+      "version": 228,
+      "year": 2019
+    },
+    "2020": {
+      "downloaded_at_utc": "2026-10-15T05:54:29+00:00",
+      "file_name": "2020-v210-25092026-EU MRV Publication of information",
+      "file_size_bytes": 3866812,
+      "generation_date": "25-09-2026 05:07:48",
+      "version": 210,
+      "year": 2020
+    },
+    "2021": {
+      "downloaded_at_utc": "2026-10-15T05:54:36+00:00",
+      "file_name": "2021-v219-25092026-EU MRV Publication of information",
+      "file_size_bytes": 3995950,
+      "generation_date": "25-09-2026 05:10:23",
+      "version": 219,
+      "year": 2021
+    },
+    "2022": {
+      "downloaded_at_utc": "2026-10-15T05:54:45+00:00",
+      "file_name": "2022-v241-06022026-EU MRV Publication of information",
+      "file_size_bytes": 4336639,
+      "generation_date": "06-02-2026 05:24:31",
+      "version": 241,
+      "year": 2022
+    },
+    "2023": {
+      "downloaded_at_utc": "2026-10-15T05:54:53+00:00",
+      "file_name": "2023-v92-29092026-EU MRV Publication of information",
+      "file_size_bytes": 4145014,
+      "generation_date": "29-09-2026 05:08:27",
+      "version": 92,
+      "year": 2023
+    },
+    "2024": {
+      "downloaded_at_utc": "2026-10-15T05:55:12+00:00",
+      "file_name": "2024-v252-15102026-EU MRV Publication of information",
+      "file_size_bytes": 9475111,
+      "generation_date": "15-10-2026 05:21:52",
+      "version": 252,
+      "year": 2024
+    },
+    "2025": {
+      "downloaded_at_utc": "2026-10-15T05:55:31+00:00",
+      "file_name": "2025-v65-15102026-EU MRV Publication of information",
+      "file_size_bytes": 11862664,
+      "generation_date": "15-10-2026 05:40:56",
+      "version": 65,
+      "year": 2025
+    }
+  }
+}
