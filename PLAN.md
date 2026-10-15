@@ -236,7 +236,7 @@ Findings that matter for later phases:
   the analysis; Phase 4 and the API must merge them too.
 - **CO₂eq uses the IPCC factors** CH₄ × 28 and N₂O × 265.
 
-### Phase 4 — ML: predict annual fuel consumption
+### Phase 4 — ML: predict annual fuel consumption ✅ (2026-10-15)
 - **Target:** `log(fuel_t)`, on full reports with fuel > 0.
 - **Features:** ship type, technical-efficiency type + value, time at sea, ice class (yes/no), flag (top 15, else
   "Other"), year.
@@ -251,6 +251,20 @@ Findings that matter for later phases:
 
 **Done when:** the model beats the baseline MAE by a clear margin on held-out ships; metrics are saved and quoted
 in the README; a feature-importance chart is in `docs/img/`; predicting a single ship from a Python dict works.
+
+**Result:** `python -m ml.train`; `ml/predict.py` → `predict_one(dict)` returns fuel, CO₂ and smoke (0–1).
+- 101,428 ship-years from 25,249 ships. Best settings: learning rate 0.05, 127 leaves, min 50 per leaf.
+
+| Validation | Baseline MAE | Model MAE | Model median % error | Model R² |
+|---|---|---|---|---|
+| GroupKFold (5) by IMO | 1,405 t | **755 t** (−46%) | 14.9% | 0.86 |
+| Train 2018–23, test 2024–25 | 1,458 t | **736 t** (−50%) | 15.7% | 0.88 |
+
+- Drivers (permutation importance): time at sea and ship type, then the efficiency index value; year adds nothing.
+- Weakest types: offshore (53% median error), Ro-pax and passenger (24–27%) — no ship size in the data.
+- CO₂ = fuel × median CO₂/fuel of the ship type (3.13–3.21; LNG carrier 2.79).
+- `predict_one` rejects unknown ship types, unknown fields and > 8,784 h; unseen flags become "Other".
+- 14 tests in `tests/test_ml.py` pass (58 in total). The README is written in Phase 7 and quotes the table above.
 
 ### Phase 5a — API (FastAPI)
 Endpoints: `GET /api/health`, `GET /api/meta` (years, ship types, flags), `GET /api/kpis`,
