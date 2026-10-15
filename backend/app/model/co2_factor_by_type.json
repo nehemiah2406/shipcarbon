@@ -1,0 +1,22 @@
+{
+  "by_type": {
+    "Bulk carrier": 3.1369,
+    "Chemical tanker": 3.1443,
+    "Combination carrier": 3.1352,
+    "Container ship": 3.1255,
+    "Container/ro-ro cargo ship": 3.1282,
+    "Gas carrier": 3.1366,
+    "General cargo ship": 3.1548,
+    "LNG carrier": 2.7855,
+    "Oil tanker": 3.1362,
+    "Other ship types": 3.1395,
+    "Other ship types (Offshore)": 3.206,
+    "Passenger ship": 3.1559,
+    "Refrigerated cargo carrier": 3.13,
+    "Ro-pax ship": 3.1393,
+    "Ro-ro ship": 3.1262,
+    "Vehicle carrier": 3.1359
+  },
+  "default": 3.1367,
+  "note": "median CO2 / fuel per ship type, full-report ship-years with fuel > 0"
+}
