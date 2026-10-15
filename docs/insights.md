@@ -61,3 +61,35 @@ mostly reflect ship size and speed, not cargo carried, so they are not used as a
 
 **Caveats:** no ship size (DWT/GT) in the public data; flag is derived; 2025 covers more ship types than earlier
 years; EMSA keeps correcting files (versions recorded in `data/raw/manifest.json`).
+
+---
+
+## Model: predicting a ship's annual fuel
+
+**What it predicts:** how many tonnes of fuel a ship burns in a year on EU MRV voyages, from what we know about
+the ship: type, efficiency index (type and value), hours at sea, ice class, flag (top 15, else "Other") and year.
+CO₂ is then fuel × the median CO₂/fuel ratio of that ship type (about 3.14; 2.79 for LNG carriers). Nothing
+computed from fuel (CO₂, CH₄, per-mile figures, distance) is used as an input, so the model cannot copy the answer.
+Model: scikit-learn `HistGradientBoostingRegressor` on log(fuel); 101,428 ship-years from 25,249 ships.
+
+**Results.** Baseline = median fuel per hour at sea for the ship type × the ship's hours at sea.
+
+| Validation | Baseline average error | Model average error | Model median % error | Model R² |
+|---|---|---|---|---|
+| Ships the model never saw (GroupKFold by IMO) | 1,405 t | **755 t** (−46%) | 14.9% | 0.86 |
+| Train 2018–2023, test 2024–2025 | 1,458 t | **736 t** (−50%) | 15.7% | 0.88 |
+
+**What drives the prediction:** hours at sea and ship type matter most, then the efficiency index value. Flag, ice
+class and efficiency-index type add a little; year adds nothing.
+
+![Feature importance](img/08_feature_importance.png)
+*Source: `python -m ml.train`, saved in `backend/app/model/metrics.json`.*
+
+**Limitations**
+- **No ship size.** The public data has no deadweight or gross tonnage, so a small and a very large ship of the
+  same type look alike. This is the main source of error: offshore ships (53% median error), Ro-pax and passenger
+  ships (24–27%) are the weakest types.
+- **Flag is derived** from the port of registry, not reported directly; 2.4% of ship-years have an unknown
+  flag.
+- **2025 covers more ship types** (newly included general cargo and offshore ships), so 2025 is not like-for-like
+  with earlier years.
