@@ -21,3 +21,4 @@ uvicorn[standard]==0.54.0
 
 # Tests
 pytest==9.1.1
+mongomock==4.3.0         # fake MongoDB for tests/test_api.py

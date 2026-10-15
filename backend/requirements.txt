@@ -1,0 +1,11 @@
+# API only (used by Render). Install from the project root: pip install -r backend/requirements.txt
+# Start command: uvicorn backend.app.main:app --host 0.0.0.0 --port $PORT
+# scikit-learn and joblib must stay at the versions the model was trained with (see backend/app/model/metrics.json).
+fastapi==0.143.1
+uvicorn[standard]==0.54.0
+pymongo==4.19.0
+python-dotenv==1.2.4
+scikit-learn==1.9.1
+joblib==1.6.0
+pandas==3.0.6
+numpy==2.5.4
