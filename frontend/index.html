@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ShipCarbon</title>
+  <meta name="description" content="CO2 from ships sailing to and from Europe, 2018-2025. EU MRV data and a fuel-consumption model.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0f1e'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23ffb547'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span>ShipCarbon</a>
+      <nav aria-label="Sections">
+        <a href="#charts">Charts</a>
+        <a href="#emitters">Top emitters</a>
+        <a href="#findings">Findings</a>
+        <a href="#predict">Predict</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div id="status" class="status wrap" role="status" aria-live="polite" hidden></div>
+
+    <!-- 1. Hero -->
+    <section class="hero wrap reveal">
+      <p class="eyebrow">EU MRV data · EMSA THETIS-MRV</p>
+      <h1>ShipCarbon</h1>
+      <p class="lede">CO<sub>2</sub> from ships sailing to and from Europe, 2018-2025</p>
+      <p class="scope" id="scope">All years · All ship types</p>
+      <div class="kpis" id="kpis" aria-busy="true">
+        <div class="kpi"><span class="kpi-value" data-kpi="co2">–</span><span class="kpi-label">Total CO<sub>2</sub></span></div>
+        <div class="kpi"><span class="kpi-value" data-kpi="ships">–</span><span class="kpi-label">Ships</span></div>
+        <div class="kpi"><span class="kpi-value" data-kpi="fuel">–</span><span class="kpi-label">Fuel burned</span></div>
+        <div class="kpi"><span class="kpi-value" data-kpi="perShip">–</span><span class="kpi-label">CO<sub>2</sub> per ship per year</span></div>
+      </div>
+    </section>
+
+    <!-- 2. Filters -->
+    <section class="filters-bar" aria-label="Filters">
+      <div class="wrap filters">
+        <label>Year
+          <select id="f-year" disabled><option value="">All years</option></select>
+        </label>
+        <label>Ship type
+          <select id="f-type" disabled><option value="">All ship types</option></select>
+        </label>
+        <button type="button" id="f-reset" class="btn-ghost" disabled>Reset</button>
+      </div>
+    </section>
+
+    <!-- 3. Charts -->
+    <section id="charts" class="wrap section reveal">
+      <h2>Where the CO<sub>2</sub> comes from</h2>
+      <div class="grid-2">
+        <figure class="card chart-card">
+          <figcaption>
+            <span class="card-title">CO<sub>2</sub> per year</span>
+            <span class="card-note" id="year-note">Million tonnes · all ship types</span>
+          </figcaption>
+          <div class="chart-box"><canvas id="chart-year" role="img" aria-label="Bar chart of CO2 per year"></canvas></div>
+        </figure>
+        <figure class="card chart-card">
+          <figcaption>
+            <span class="card-title">CO<sub>2</sub> by ship type</span>
+            <span class="card-note" id="type-note">Top 10 · million tonnes · all years</span>
+          </figcaption>
+          <div class="chart-box chart-box-tall"><canvas id="chart-type" role="img" aria-label="Horizontal bar chart of CO2 by ship type"></canvas></div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 4. Top emitters -->
+    <section id="emitters" class="wrap section reveal">
+      <h2>Top 10 emitters</h2>
+      <p class="section-note" id="emitters-note">Single ship-years with the most CO<sub>2</sub>, all years ranked together.</p>
+      <div class="card table-card">
+        <table>
+          <thead>
+            <tr><th>#</th><th>Ship</th><th>IMO</th><th>Type</th><th>Flag</th><th>Year</th><th class="num">CO<sub>2</sub> (t)</th></tr>
+          </thead>
+          <tbody id="emitters-body">
+            <tr><td colspan="7" class="muted">Loading…</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 5. Key findings -->
+    <section id="findings" class="wrap section reveal">
+      <h2>Key findings</h2>
+      <div class="findings">
+        <article class="card finding">
+          <span class="finding-num">34%</span>
+          <h3>Container ships</h3>
+          <p>14% of the fleet but a third of the CO<sub>2</sub> in 2025 (51.7 Mt from 2,430 ships).</p>
+        </article>
+        <article class="card finding">
+          <span class="finding-num">48%</span>
+          <h3>One ship in ten</h3>
+          <p>The top 10% of ships emitted almost half the CO<sub>2</sub> in 2025, up from 42% in 2018.</p>
+        </article>
+        <article class="card finding">
+          <span class="finding-num">−12%</span>
+          <h3>COVID dip</h3>
+          <p>CO<sub>2</sub> fell from 147 to 130 Mt in 2020 and only passed the 2019 level again in 2024.</p>
+        </article>
+        <article class="card finding">
+          <span class="finding-num">+4.2 Mt</span>
+          <h3>The 2025 rise</h3>
+          <p>Comes from newly covered ships (+6.6 Mt). Ships reported in both 2024 and 2025 emitted 6.3% less.</p>
+        </article>
+        <article class="card finding">
+          <span class="finding-num">~60%</span>
+          <h3>LNG carriers and methane</h3>
+          <p>2% of ships, but 59% of all reported methane in 2025 (50,500 t CH<sub>4</sub>).</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. Predict -->
+    <section id="predict" class="wrap section reveal">
+      <h2>Predict a ship</h2>
+      <p class="section-note">A machine-learning model estimates a ship's yearly fuel use from what is known about it. CO<sub>2</sub> follows from the fuel.</p>
+      <div class="grid-2 predict-grid">
+        <form id="predict-form" class="card form" novalidate>
+          <label class="span-2">Ship type
+            <select name="ship_type" id="p-type" required><option value="">Loading…</option></select>
+          </label>
+          <label>Hours at sea in the year
+            <input name="time_at_sea_h" type="number" min="0" max="8784" step="1" value="6000" required inputmode="numeric">
+          </label>
+          <label>Year
+            <select name="year" id="p-year"></select>
+          </label>
+          <label>Efficiency index type
+            <select name="tech_eff_type">
+              <option value="">Not known</option>
+              <option>EEDI</option>
+              <option selected>EEXI</option>
+              <option>EIV</option>
+              <option>Not Applicable</option>
+            </select>
+          </label>
+          <label>Efficiency value <span class="hint">gCO<sub>2</sub>/t·nm</span>
+            <input name="tech_eff_value" type="number" min="0" max="500" step="0.1" value="9.5" inputmode="decimal">
+          </label>
+          <label>Flag
+            <select name="flag" id="p-flag"><option value="">Not known</option></select>
+          </label>
+          <label class="check">
+            <input name="ice_class" type="checkbox"> Has an ice class
+          </label>
+          <button type="submit" class="btn span-2" id="p-submit">Predict fuel and CO<sub>2</sub></button>
+        </form>
+        <div class="card result" id="p-result" aria-live="polite">
+          <p class="muted" id="p-placeholder">Fill in the form and press <strong>Predict</strong>.</p>
+          <div id="p-values" hidden>
+            <div class="kpi"><span class="kpi-value" id="p-fuel">–</span><span class="kpi-label">Fuel per year</span></div>
+            <div class="kpi"><span class="kpi-value accent" id="p-co2">–</span><span class="kpi-label">CO<sub>2</sub> per year</span></div>
+            <p class="muted small">Typical error is about 750 t of fuel. The public data has no ship size, so a small and a very large ship of the same type look alike to the model.</p>
+          </div>
+          <p class="error" id="p-error" hidden></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. Footer -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p><strong>Data:</strong> EU MRV emission reports, European Maritime Safety Agency (EMSA), THETIS-MRV.</p>
+        <p class="muted">A personal project, not affiliated with EMSA.</p>
+      </div>
+      <div class="footer-links">
+        <span>Hari P</span>
+        <a href="https://github.com/nehemiah2406" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/nehemiah-hari" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="/docs">API docs</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

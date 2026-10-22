@@ -3,7 +3,7 @@
 Run locally from the project root:
     uvicorn backend.app.main:app --reload
 
-Then open http://127.0.0.1:8000/docs for the interactive documentation.
+Then open http://127.0.0.1:8000 for the website, or http://127.0.0.1:8000/docs for the API documentation.
 """
 
 import os
@@ -12,13 +12,15 @@ from contextlib import asynccontextmanager
 
 from fastapi import Depends, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import RedirectResponse
+from fastapi.staticfiles import StaticFiles
 from pymongo.database import Database
 
 from backend.app.db import ensure_indexes, get_db, is_reachable
 from backend.app.routes import predict, stats
+from ml.features import ROOT
 
 LOCAL_FRONTEND = "http://localhost:5173"  # Vite dev server
+FRONTEND_DIR = ROOT / "frontend"  # the website (plain HTML, CSS and JavaScript), served at /
 
 
 def allowed_origins() -> list[str]:
@@ -54,11 +56,6 @@ app.include_router(stats.router)
 app.include_router(predict.router)
 
 
-@app.get("/", include_in_schema=False)
-def root():
-    return RedirectResponse("/docs")
-
-
 @app.get("/api/health", tags=["status"], summary="Is the API working? Database and model status")
 def health(db: Database = Depends(get_db)):
     database, model = is_reachable(db), predict.model_loaded()
@@ -68,3 +65,7 @@ def health(db: Database = Depends(get_db)):
         "model": model,
         "data_versions": stats.data_versions(),
     }
+
+
+# Mounted last so /docs, /openapi.json and every /api route are matched first.
+app.mount("/", StaticFiles(directory=FRONTEND_DIR, html=True), name="website")

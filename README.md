@@ -3,7 +3,7 @@
 How much CO₂ do ships emit on voyages to and from Europe, and which ships emit the most?
 ShipCarbon answers that with 8 years of official EU data, and predicts a ship's yearly fuel use with machine learning.
 
-**Status:** data pipeline, analysis, ML model and API are done. A simple website is next.
+**Status:** website done, deploy next.
 
 ## What it does
 
@@ -12,6 +12,7 @@ ShipCarbon answers that with 8 years of official EU data, and predicts a ship's 
 3. **Analyses** the data in a Jupyter notebook. Key findings are in [docs/insights.md](docs/insights.md).
 4. **Predicts** a ship's annual fuel (and CO₂) from its type, efficiency index, hours at sea, ice class, flag and year.
 5. **Serves** statistics and predictions through a FastAPI backend.
+6. **Shows** it all on a simple website: headline numbers, filters, charts, the top emitters, key findings and a prediction form.
 
 ## Key findings
 
@@ -35,7 +36,7 @@ The main limitation is that the public data has no ship size, so a small and a v
 
 ## Tech stack
 
-Python · httpx · pandas · MongoDB · Jupyter · Matplotlib · scikit-learn · FastAPI · pytest
+Python · httpx · pandas · MongoDB · Jupyter · Matplotlib · scikit-learn · FastAPI · pytest · HTML/CSS/JavaScript · Chart.js
 
 ## Project structure
 
@@ -44,6 +45,7 @@ pipeline/    download, clean and load the EMSA data into MongoDB
 notebooks/   exploratory data analysis (01_eda.ipynb)
 ml/          features, training and single-ship prediction
 backend/     FastAPI app and the trained model
+frontend/    the website (plain HTML, CSS and JavaScript, no build step)
 docs/        insights and charts
 tests/       automated tests (pytest)
 ```
@@ -66,7 +68,7 @@ python -m ml.train              # train the model
 uvicorn backend.app.main:app --reload
 ```
 
-Then open http://127.0.0.1:8000/docs to try the API.
+Then open the website at **http://127.0.0.1:8000**. The API documentation is at http://127.0.0.1:8000/docs.
 
 ## API endpoints
 

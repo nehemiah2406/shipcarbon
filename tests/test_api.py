@@ -188,3 +188,18 @@ def test_frontend_origins_from_env(monkeypatch):
     monkeypatch.setenv("FRONTEND_ORIGINS", " https://shipcarbon.vercel.app/ , https://www.example.org")
     assert main.allowed_origins() == ["http://localhost:5173", "https://shipcarbon.vercel.app",
                                       "https://www.example.org"]
+
+
+# ---------- website ----------
+
+def test_home_page_is_the_website(client):
+    res = client.get("/")
+    assert res.status_code == 200 and res.headers["content-type"].startswith("text/html")
+    assert "<title>ShipCarbon</title>" in res.text and 'src="app.js"' in res.text
+    assert client.get("/styles.css").status_code == 200 and client.get("/app.js").status_code == 200
+
+
+def test_docs_and_api_still_work_next_to_the_website(client):
+    assert client.get("/docs").status_code == 200
+    assert client.get("/api/health").json()["database"] is True
+    assert client.get("/api/does-not-exist").status_code == 404
